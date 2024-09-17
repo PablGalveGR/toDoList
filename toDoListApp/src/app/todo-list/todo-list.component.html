@@ -1,0 +1,22 @@
+<!-- todoList.component.html -->
+ <div class = "toDolist">
+  <div class = "newTask">
+    <input type = "text" placeholder="New task" #todoText>
+    <button (click) = "addTask(todoText.value)">Add</button>
+  </div>
+  <div class = "listOfTasks">
+    <ul>
+      <div class = "task">
+        <li *ngFor="let todoItem of todoList">
+          <input
+            type="checkbox"
+            [(checked)]="todoItem.completed"
+            (change)="toggleCompleted(todoItem.id)"
+        />
+        <span [class.completed]="todoItem.completed">{{ todoItem.task }}</span>
+        <button (click)="deleteTask(todoItem.id)">Delete</button>
+        </li>
+      </div>
+    </ul>
+  </div>
+ </div>
