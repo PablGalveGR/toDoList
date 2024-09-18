@@ -1,0 +1,14 @@
+body,
+html {
+  height: 100%;
+  padding: 0px;
+}
+
+body {
+  background-color: bisque;
+}
+app-root{
+    width: 50%;
+    height: 50%;
+    margin: auto;
+}
