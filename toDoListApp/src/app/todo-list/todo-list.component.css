@@ -19,7 +19,6 @@ body {
   border: solid black;
   width: 50%;
   margin: auto;
-  
 }
 
 ul {
@@ -35,7 +34,9 @@ ul {
   width: 50%;
   text-align: center;
 }
-
+.newTask input{
+  border-radius: 5px;
+}
 
 .listOfTasks {
   background-color: white;
@@ -44,9 +45,23 @@ ul {
   padding: 10px;
 }
 
-.task li {
+li {
   background-color: bisque;
-  padding: 10px;
+  padding: 5px;
   margin: 5px;
   border: solid black;
+}
+li:hover {
+  background-color: orange;
+  cursor: pointer;
+}
+li span{
+  width: 75%;
+  margin-right: 25%;
+}
+li span.complete{
+  text-decoration: line-through;
+}
+li button{
+  width: 25%;
 }
