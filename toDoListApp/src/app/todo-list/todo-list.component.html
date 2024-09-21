@@ -6,16 +6,9 @@
   </div>
   <div class="listOfTasks">
     <ul>
-
       <li *ngFor="let todoItem of todoList" [id]="todoItem.id" (click)="toggleCompleted(todoItem.id)">
         <span [class.completed]="todoItem.completed">{{ todoItem.task }}</span>
-        <button (click)="deleteTask(todoItem.id)">Delete</button>
-        <!--<input
-            type="checkbox"
-            [(checked)]="todoItem.completed"
-            (change)="toggleCompleted(todoItem.id)"
-        />-->
-
+        <button (click)="deleteTask(todoItem.id)"><i class="glyphicon glyphicon-remove"></i></button>
       </li>
 
     </ul>
